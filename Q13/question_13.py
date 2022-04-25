@@ -10,3 +10,8 @@ print(li)
 
 # => ['a', 'b', 'c']
 # => ['c', 'b', 'a']
+
+# вернуть копию списка не изменяя оригинал можно так
+print([i for i in reversed(li)])
+print(list(reversed(li)))
+print(li[::-1])

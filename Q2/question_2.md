@@ -7,7 +7,7 @@ name = 'Chris'
 print(f'Hello {name}')
 
 # 2. % operator
-print('Hey %s %s' % (name, name))
+print('Hey %s' % (name))
 
 # 3. format
 print(

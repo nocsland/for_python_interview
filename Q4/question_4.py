@@ -43,6 +43,7 @@ def friends_name():
 
 my_name()
 friends_name()
+
 # => <function my_name at 0x10fca5a60> called.
 # => chris
 # => <function friends_name at 0x10fca5f28> called.

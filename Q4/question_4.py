@@ -44,9 +44,41 @@ def friends_name():
 my_name()
 friends_name()
 
+
 # => <function my_name at 0x10fca5a60> called.
 # => chris
 # => <function friends_name at 0x10fca5f28> called.
 # => naruto
 
 # Теперь легко добавить ведение журнала в любую функцию, которую мы пишем. Достаточно написать перед ней @logging.
+
+# Пример 2
+def decorator(func):
+    '''Основная функция'''
+    print('декоратор')
+
+    def wrapper():
+        print('-- до функции', func.__name__)
+        func()
+        print('-- после функции', func.__name__)
+
+    return wrapper
+
+
+@decorator
+def wrapped():
+    print('--- обернутая функция')
+
+
+print('- старт программы...')
+wrapped()
+print('- конец программы')
+
+# Вывод в консоль
+
+# декоратор
+# - старт программы...
+# -- до функции wrapped
+# --- обернутая функция
+# -- после функции wrapped
+# - конец программы

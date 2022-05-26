@@ -1,16 +1,30 @@
-65. Что такое фикстуры в pytest Какие фикстуры вы знаете?
+64. Чем отличаются implicit и explicit wait в selenium?
 
-Фикстуры это функции, выполняемые pytest до (а иногда и после) фактических тестовых функций. Код в фикстуре может делать
-все, что вам необходимо. Вы можете использовать Fixtures, чтобы получить набор данных для тестирования. Вы можете
-использовать Fixtures, чтобы получить систему в известном состоянии перед запуском теста. Fixtures также используются
-для получения данных для нескольких тестов. Хранятся либо непосредственно в методе либо в файле conftest.py
+Explicit Wait - явное ожидание
 
-Уровень фикстуры (scope)
+О явном ожидании стоит помнить следующие вещи: ожидание сработает именно там, где оно указано; как и неявному ожиданию,
+ему необходимо указать лимит времени; ожидает выполнения необходимого условия; ждет завершения Ajax request.
 
-Уровень фикстуры может принимать следующие возможные значения “function”, “cls”, “module”, “session”. Значение по
-умолчанию = “function”.
+alertIsPresent()
+elementSelectionStateToBe()
+elementToBeClickable()
+elementToBeSelected()
+frameToBeAvialiableAndSwitchToIt()
+invisibilityOfTheElementLocated()
+invisibilityOfElementWithText()
+presenceOfAllElementsLocatedBy()
+presenceOfElementLocated()
+textToBePresentInElement()
+textToBePresentInElementLocated()
+textToBePresentInElementValue()
+titleIs()
+titleContains()
+visibilityOf()
+visibilityOfAllElements()
+visibilityOfAllElementsLocatedBy()
+visibilityOfElementLocated()
 
-function – фикстура запускается для каждого теста
-cls – фикстура запускается для каждого класса
-module – фикстура запускается для каждого модуля
-session – фикстура запускается для каждой сессии (то есть фактически один раз)
+Implicit Wait, или неявное ожидание 
+
+Чтобы использовать Implicit Wait в автотестестах, достаточно: установить его всего 1 раз, указать вручную лимит
+ожидания.
